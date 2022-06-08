@@ -2,14 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
-    width: 414px;
-    margin: 0 auto;
     font-family: 'Righteous', cursive;
     font-family: 'Roboto', sans-serif;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.container {
+    width: 414px;
+    margin: 0 auto;
 }
 
 /*Barra do topo*/
@@ -32,14 +35,14 @@ body {
     justify-content: center;
 }
 
-.logo h1 {
+.logo > h1 {
     font-size: 44px;
     font-family: Righteous;
     font-weight: 400;
     color: #ffffff;
 }
 
-.logo h2 {
+.logo > h2 {
     font-size: 18px;
     font-family: Roboto;
     font-weight: 400;
@@ -47,13 +50,100 @@ body {
 }
 
 /*Feed de conteúdo*/
-.container {
+.feed {
     width: 100%;
-    height: 843px;
-    margin-top: 92px;
+    margin: 92px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: #EEEEEE;
 }
 
+.container-itens {
+    width: 100%;
+    height: 258px;
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-itens > h1 {
+    font-size: 26px;
+    font-family: Righteous;
+    color: #333333;
+    padding-left: 19px;
+}
+
+.container-menu {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-pratos {
+    width: 172px;
+    height: 216px;
+    line-height: 18px;
+    margin-left: 16px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    background-color: #ffffff;
+}
+
+.menu-infos-pratos {
+    width: 145px;
+    height: 187px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-infos-pratos > img {
+    width: 145px;
+    height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.menu-infos-pratos > h2 {
+    font-size: 16px;
+    font-family: roboto;
+    font-weight: 700;
+    color: #333333;
+}
+
+.menu-infos-pratos > h3 {
+    font-size: 15px;
+    font-family: roboto;
+    font-weight: 300;
+    color: #a6a6a6;
+}
+
+.menu-infos-pratos > p {
+    font-size: 16px;
+    font-family: roboto;
+    font-weight: 400;
+}
+
+.menu-bebida {
+    width: 172px;
+    height: 202px;
+}
+
+.menu-infos-bebida {
+    width: 145px;
+    height: 168px;
+}
 
 /*Barra da base*/
 .barra-base {
