@@ -10,171 +10,189 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    width: 414px;
-    margin: 0 auto;
+@media (min-width: 415px){
+    * {
+        display: none;
+    }
 }
 
-/*Barra do topo*/
-.barra-topo {
-    width: 100%;
-    height: 92px; 
-    position: fixed;
-    top: 0;
-    right: 0;
-}
+@media (max-width: 414px) {
+    
+    /*Barra do topo*/
+    .barra-topo {
+        width: 100%;
+        height: 92px; 
+        background-color: #CF2B2B;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding-left: 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    
+    .barra-topo > h1 {
+        font-size: 44px;
+        font-family: Righteous;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    
+    .barra-topo > h2 {
+        font-size: 18px;
+        font-family: Roboto;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    
+    /*Feed de conteúdo*/
+    .feed {
+        width: 100%;
+        margin: 92px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #EEEEEE;
+    }
+    
+    .container-itens {
+        width: 100%;
+        height: 264px; 
+        margin-top: 27px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .container-itens-bebidas {
+        width: 100%;
+        height: 251px;
+    }
+    
+    .container-itens > h1 {
+        font-size: 26px;
+        font-family: Righteous;
+        color: #333333;
+        padding-left: 19px;
+    }
+    
+    .container-menu {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .container-menu::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .menu-pratos {
+        width: 172px;
+        height: 216px;
+        line-height: 18px;
+        margin-left: 16px; 
+        margin-bottom: 6px;
+        border-radius: 9px;
+        box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        background-color: #ffffff;                        
+        position: relative;
+    }
 
-.logo {
-    width: 414px;
-    height: 100%;
-    background-color: #CF2B2B;
-    padding-left: 21px;    
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .container-menu :last-child {
+        margin-right: 16px;
+    }
 
-.logo > h1 {
-    font-size: 44px;
-    font-family: Righteous;
-    font-weight: 400;
-    color: #ffffff;
-}
+    .ioniconCheck {
+        font-size: 20px;
+        position: absolute;
+        bottom: 14px;
+        right: -6px;
+        color: #32B72F;
+    }
 
-.logo > h2 {
-    font-size: 18px;
-    font-family: Roboto;
-    font-weight: 400;
-    color: #ffffff;
-}
+    .bordaCheck {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+    }
+    
+    .menu-bebida {
+        width: 172px;
+        height: 202px;
+    }
+    
+    .menu-infos-pratos {
+        width: 145px;
+        height: 187px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .menu-infos-pratos > img {
+        width: 145px;
+        height: 87px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    
+    .menu-infos-pratos > h2 {
+        font-size: 16px;
+        font-family: roboto;
+        font-weight: 700;
+        color: #333333;
+    }
+    
+    .menu-infos-pratos > h3 {
+        font-size: 15px;
+        font-family: roboto;
+        font-weight: 300;
+        color: #a6a6a6;
+    }
+    
+    .menu-infos-pratos > p {
+        font-size: 16px;
+        font-family: roboto;
+        font-weight: 400;
+    }
+    
+    .menu-infos-bebida {
+        width: 145px;
+        height: 168px;
+    }
+    
+    /*Barra da base*/
+    .barra-base {
+        width: 100%;
+        height: 92px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+        
+    .barra-base > div {
+        width: 364px;
+        height: 61px;
+        font-size: 20px;
+        font-family: roboto;
+        color: #ffffff;
+        border-radius: 50px;
+        background-color: #cbcbcb;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
 
-/*Feed de conteúdo*/
-.feed {
-    width: 100%;
-    margin: 92px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #EEEEEE;
-}
-
-.container-itens {
-    width: 100%;
-    height: 258px;
-    margin-top: 27px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.container-itens > h1 {
-    font-size: 26px;
-    font-family: Righteous;
-    color: #333333;
-    padding-left: 19px;
-}
-
-.container-menu {
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.container-menu::-webkit-scrollbar {
-    display: none;
-}
-
-.menu-pratos {
-    width: 172px;
-    height: 216px;
-    line-height: 18px;
-    margin-left: 16px;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    padding: 0 14px;
-    background-color: #ffffff;
-}
-
-.menu-infos-pratos {
-    width: 145px;
-    height: 187px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-infos-pratos > img {
-    width: 145px;
-    height: 87px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.menu-infos-pratos > h2 {
-    font-size: 16px;
-    font-family: roboto;
-    font-weight: 700;
-    color: #333333;
-}
-
-.menu-infos-pratos > h3 {
-    font-size: 15px;
-    font-family: roboto;
-    font-weight: 300;
-    color: #a6a6a6;
-}
-
-.menu-infos-pratos > p {
-    font-size: 16px;
-    font-family: roboto;
-    font-weight: 400;
-}
-
-.menu-bebida {
-    width: 172px;
-    height: 202px;
-}
-
-.menu-infos-bebida {
-    width: 145px;
-    height: 168px;
-}
-
-/*Barra da base*/
-.barra-base {
-    width: 100%;
-    height: 92px;
-    background-color: #ffffff;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-.fechar-pedido {
-    width: 414px;
-    height: 100%;
-    margin: 0 auto;   
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    border: 1px solid red;
-}
-
-.botao {
-    width: 364px;
-    height: 61px;
-    font-size: 20px;
-    font-family: roboto;
-    color: #ffffff;
-    border-radius: 50px;
-    background-color: #cbcbcb;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
