@@ -25,7 +25,7 @@
 
             <div class="container-menu pratos">
 
-                <div class="menu-pratos" onclick="checkBoxP(this);">
+                <div class="menu-pratos" onclick="checkBoxP(this); ionCheck();">
                     <div class="menu-infos-pratos">
                         <img src="./images/comida1.jpg" alt="">
                         <h2>Bolinho de lentilha</h2>
@@ -194,12 +194,12 @@
     </div>
 
     <!--Barra da base-->
-    <div class="barra-base" onclick="Pedido();">
+    <div class="barra-base">
         <div class="botao-3itens">
             <p>Selecione os 3 itens</p>
             <p>para fechar o pedido</p>
         </div>       
-        <div class="escondido fecharPedido">
+        <div class="escondido fecharPedido" onclick="Pedido();">
             Fechar pedido
         </div>
     </div>    

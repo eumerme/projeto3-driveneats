@@ -14,6 +14,8 @@ function checkBoxP (elemento) {
     }
 
     elemento.classList.add("bordaCheck");   
+
+    pedido();
 }
 
 
@@ -26,6 +28,8 @@ function checkBoxB (elemento) {
     }
 
     elemento.classList.add("bordaCheck");
+
+    pedido();
 } 
 
 /* borda check sobremesas */
@@ -37,7 +41,22 @@ function checkBoxS (elemento) {
     }
 
     elemento.classList.add("bordaCheck");
+
+    pedido();    
 } 
 
 /* botão fechar pedido */
+function pedido() {
 
+    let pedidoAberto = document.querySelector(".barra-base .botao-3itens");
+    let pedidoFechado = document.querySelector(".barra-base .fecharPedido");
+
+    let pratoEscolhido = document.querySelector(".pratos .bordaCheck");
+    let bebidaEscolhido = document.querySelector(".bebidas .bordaCheck");
+    let sobremesaEscolhido = document.querySelector(".sobremesas .bordaCheck");
+
+    if (pratoEscolhido && bebidaEscolhido && sobremesaEscolhido) { 
+        pedidoAberto.classList.add("escondido");
+        pedidoFechado.classList.remove("escondido");
+    }
+}

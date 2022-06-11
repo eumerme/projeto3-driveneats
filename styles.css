@@ -81,6 +81,7 @@ body {
     
     .container-menu {
         width: 100%;
+        padding-right: 16px;
         display: flex;
         overflow: hidden;
         overflow-x: scroll;
@@ -106,10 +107,6 @@ body {
         background-color: #ffffff; 
     }
     
-    .container-menu.menu-pratos :last-child {
-        margin-right: 16px;
-    }
-
     .ajuste-menu-bebidas, .ajuste-menu-sobremesas {
         width: 172px;
         height: 202px;
@@ -192,6 +189,10 @@ body {
         justify-content: center;
         align-items: center;
     } 
+
+    .fecharPedido {        
+        background-color: #32B72F;
+    }
 
     /* item selecionado */
 
