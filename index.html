@@ -23,46 +23,54 @@
         <div class="container-itens">
             <h1>Primeiro, seu prato</h1>
 
-            <div class="container-menu">
+            <div class="container-menu pratos">
 
-                <div class="menu-pratos" onclick="checkBox1();" id="um">
+                <div class="menu-pratos" onclick="checkBoxP(this);">
                     <div class="menu-infos-pratos">
                         <img src="./images/comida1.jpg" alt="">
                         <h2>Bolinho de lentilha</h2>
                         <h3>Um pouco de lentilha, um pouco de salada</h3>
-                        <p>R$ 19,90</p>
-                    </div>
-                    <ion-icon name="checkmark-circle"></ion-icon>                                 
+                        <div class="bottom-info-p">
+                            <p>R$ 19,90</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                   
                 </div>
 
-                <div class="menu-pratos" onclick="checkBox2();" id="dois">
+                <div class="menu-pratos" onclick="checkBoxP(this);">
                     <div class="menu-infos-pratos">
                         <img src="./images/comida2.jpg" alt="">
                         <h2>Salada verde</h2>
                         <h3>Um pouco de pão, muita salada</h3>
-                        <p>R$ 14,90</p>
-                    </div>
-                    <ion-icon name="checkmark-circle"></ion-icon>                    
+                        <div class="bottom-info-p">
+                            <p>R$ 14,90</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>  
+                    </div>                                                      
                 </div>
 
-                <div class="menu-pratos" onclick="checkBox3();" id="três">
+                <div class="menu-pratos" onclick="checkBoxP(this);">
                     <div class="menu-infos-pratos">
                         <img src="./images/comida3.jpg" alt="">
                         <h2>Macarrão</h2>
                         <h3>Com bastante pimentão</h3>
-                        <p>R$ 17,90</p>
-                    </div>
-                    <ion-icon name="checkmark-circle"></ion-icon>                  
+                        <div class="bottom-info-p">
+                            <p>R$ 17,90</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div> 
+                    </div>              
                 </div>
 
-                <div class="menu-pratos" onclick="checkBox4();" id="quatro">
+                <div class="menu-pratos" onclick="checkBoxP(this);">
                     <div class="menu-infos-pratos">
                         <img src="./images/comida4.jpg" alt="">
                         <h2>Salada de ovo</h2>
                         <h3>Muita salada, quase nada de ovo</h3>
-                        <p>R$ 12,90</p>
-                    </div> 
-                    <ion-icon name="checkmark-circle"></ion-icon>                   
+                        <div class="bottom-info-p">
+                            <p>R$ 12,90</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                  
                 </div>  
 
             </div>
@@ -72,46 +80,54 @@
         <div class="container-itens container-itens-bebidas">
             <h1>Agora, sua bebida</h1>
 
-            <div class="container-menu">
+            <div class="container-menu bebidas">
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox5();" id="cinco">
+                <div class="menu-bebidas ajuste-menu-bebidas" onclick="checkBoxB(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/bebida1.jpg" alt="">
                         <h2>Limonada suiça</h2>
                         <h3>Copo 350ml</h3>
-                        <p>R$ 6,99</p>
-                    </div>  
-                    <ion-icon name="checkmark-circle"></ion-icon>                  
+                        <div class="bottom-info-p">
+                            <p>R$ 6,99</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                 
                 </div>
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox6();" id="seis">
+                <div class="menu-bebidas ajuste-menu-bebidas" onclick="checkBoxB(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/bebida222.jpg" alt="">
                         <h2>Suco de melancia</h2>
                         <h3>Copo 350ml</h3>
-                        <p>R$ 7,90</p>
-                    </div>    
-                    <ion-icon name="checkmark-circle"></ion-icon>                
+                        <div class="bottom-info-p">
+                            <p>R$ 7,90</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                   
                 </div>
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox7();" id="sete">
+                <div class="menu-bebidas ajuste-menu-bebidas" onclick="checkBoxB(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/bebida33.jpg" alt="">
                         <h2>Água com gás</h2>
                         <h3>Copo 500ml</h3>
-                        <p>R$ 5,00</p>
-                    </div>  
-                    <ion-icon name="checkmark-circle"></ion-icon>                  
+                        <div class="bottom-info-p">
+                            <p>R$ 5,00</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                  
                 </div>
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox8();" id="oito">
+                <div class="menu-bebidas ajuste-menu-bebidas" onclick="checkBoxB(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/bebida44.jpg" alt="">
                         <h2>Suco de grapefruit</h2>
                         <h3>Copo 350ml</h3>
-                        <p>R$ 8,90</p>
-                    </div>
-                    <ion-icon name="checkmark-circle"></ion-icon>                    
+                        <div class="bottom-info-p">
+                            <p>R$ 8,90</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                    
                 </div>
 
             </div>
@@ -122,46 +138,54 @@
         <div class="container-itens container-itens-bebidas">
             <h1>Por fim, sua sobremesa</h1>
 
-            <div class="container-menu">
+            <div class="container-menu sobremesas">
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox9();" id="nove">
+                <div class="menu-sobremesas ajuste-menu-sobremesas" onclick="checkBoxS(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/sobremesa1.jpg" alt="">
                         <h2>Pudim</h2>
                         <h3>Uma fatia</h3>
-                        <p>R$ 7,00</p>
-                    </div>     
-                    <ion-icon name="checkmark-circle"></ion-icon>               
+                        <div class="bottom-info-p">
+                            <p>R$ 7,00</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                 
                 </div>
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox10();" id="dez">
+                <div class="menu-sobremesas ajuste-menu-sobremesas" onclick="checkBoxS(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/sobremesa22.jpg" alt="">
                         <h2>Trufa</h2>
                         <h3>Uma unidade</h3>
-                        <p>R$ 4,00</p>
+                        <div class="bottom-info-p">
+                            <p>R$ 4,00</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>                    
-                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox11();" id="onze">
+                <div class="menu-sobremesas ajuste-menu-sobremesas" onclick="checkBoxS(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/sobremesa3.jpg" alt="">
                         <h2>Cupcake</h2>
                         <h3>Uma unidade</h3>
-                        <p>R$ 6,00</p>
-                    </div>  
-                    <ion-icon name="checkmark-circle"></ion-icon>                  
+                        <div class="bottom-info-p">
+                            <p>R$ 6,00</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                   
                 </div>
 
-                <div class="menu-pratos menu-bebida" onclick="checkBox12();" id="doze">
+                <div class="menu-sobremesas ajuste-menu-sobremesas" onclick="checkBoxS(this);">
                     <div class="menu-infos-pratos menu-infos-bebida">
                         <img src="./images/sobremesa4.jpg" alt="">
                         <h2>Cookie</h2>
                         <h3>Uma unidade</h3>
-                        <p>R$ 6,00</p>
-                    </div>  
-                    <ion-icon name="checkmark-circle"></ion-icon>                  
+                        <div class="bottom-info-p">
+                            <p>R$ 5,00</p>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                    </div>                  
                 </div>
 
             </div>
@@ -170,15 +194,18 @@
     </div>
 
     <!--Barra da base-->
-    <div class="barra-base">
-        <div>
+    <div class="barra-base" onclick="Pedido();">
+        <div class="botao-3itens">
             <p>Selecione os 3 itens</p>
             <p>para fechar o pedido</p>
         </div>       
+        <div class="escondido fecharPedido">
+            Fechar pedido
+        </div>
     </div>    
-    
-    <script src="scripts.js"></script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
