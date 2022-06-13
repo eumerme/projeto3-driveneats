@@ -53,10 +53,10 @@ body {
     .feed {
         width: 100%;
         margin: 92px auto;
+        padding-bottom: 12px;
         display: flex;
         flex-direction: column;
         background-color: #EEEEEE;
-        padding-bottom: 27px;
     }
     
     .container-itens {
@@ -254,7 +254,7 @@ body {
     }
 
 
-    /* itens js */
+    /* itens selecionados - comandos js */
     .bordaCheck {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
     }

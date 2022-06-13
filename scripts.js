@@ -69,6 +69,7 @@ function ionCheckS(elemento){
     iconeCheck.classList.add("ionicon-check");
 }    
 
+
 /* botão fechar pedido */
 function pedido() {
     const pratoEscolhido = document.querySelector(".pratos .bordaCheck");
@@ -115,7 +116,7 @@ function confirmePedido() {
         const valorComida = Number((precoComida).replace("R$","").replace(",","."));
         const valorBebida = Number((precoBebida).replace("R$","").replace(",","."));
         const valorSobremesa = Number((precoSobremesa).replace("R$","").replace(",","."));
-        const total = (valorComida + valorBebida + valorSobremesa).toFixed(2);
+        const total = (valorComida + valorBebida + valorSobremesa).toFixed(2).replace(".",",");
         document.querySelector(".box-total .preco-total").innerHTML = `R$ ${total}`;
     }
 }
@@ -145,11 +146,11 @@ function msgWpp(){
     const valorComida = Number((precoComida).replace("R$","").replace(",","."));
     const valorBebida = Number((precoBebida).replace("R$","").replace(",","."));
     const valorSobremesa = Number((precoSobremesa).replace("R$","").replace(",","."));
-    const total = (valorComida + valorBebida + valorSobremesa).toFixed(2);
+    const total = (valorComida + valorBebida + valorSobremesa).toFixed(2).replace(".",",");
     document.querySelector(".box-total .preco-total").innerHTML = `R$ ${total}`;
 
-    const nome = prompt('Digite seu nome: ')
-    const endereco = prompt('Digite seu endereço: ')
+    const nome = prompt("Digite seu nome: ");
+    const endereco = prompt("Digite seu endereço: ");
 
     const msg = `Olá, gostaria de fazer o pedido:\n- Prato: ${tituloComida}\n- Bebida: ${tituloBebida}\n- Sobremesa: ${tituloSobremesa}\nTotal: R$ ${total}\n\nNome: ${nome}\nEndereço: ${endereco}`;
     const enviarMsg = `https://wa.me/5524988235658?text=${encodeURIComponent(msg)}`;
