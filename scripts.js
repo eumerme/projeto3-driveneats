@@ -45,6 +45,7 @@ function ionCheckB (elemento){
     iconeCheck.classList.add("ionicon-check");
 }
 
+
 /* slecionar sobremesas */
 function checkBoxS (elemento) {
     const sobremesaClicado = document.querySelector(".sobremesas .bordaCheck");
@@ -83,12 +84,81 @@ function pedido() {
     }
 }
 
-//alterar nomessss 
 
-function msgWpp(){
+/* Tudo certo, pode pedir */
+function confirmePedido() {
+    const botaoFecharPedido = document.querySelector(".barra-base .fecharPedido");
+    const containerOpaco = document.querySelector(".container-opaco");
 
-    const msg = `Olá, gostaria de fazer o pedido:\n- Prato: Frango Yin Yang\n- Bebida: Coquinha Gelada\n- Sobremesa: Pudim\nTotal: R$ 27.70`;
+    if (botaoFecharPedido !== null){
+        containerOpaco.classList.remove("escondido");
+
+        //comida selecionada 
+        const tituloComida = document.querySelector(".pratos .bordaCheck .menu-infos h2").innerHTML; 
+        document.querySelector(".box-comida .item-escolhido").innerHTML = `${tituloComida}`;
+        const precoComida = document.querySelector(".pratos .bordaCheck .menu-infos p").innerHTML;
+        document.querySelector(".box-comida .preco").innerHTML = `${precoComida}`;
+
+        //bebida selecionada 
+        const tituloBebida = document.querySelector(".bebidas .bordaCheck .menu-infos h2").innerHTML; 
+        document.querySelector(".box-bebida .item-escolhido").innerHTML = `${tituloBebida}`;
+        const precoBebida = document.querySelector(".bebidas .bordaCheck .menu-infos p").innerHTML;
+        document.querySelector(".box-bebida .preco").innerHTML = `${precoBebida}`;
+
+        //sobremesa selecionada 
+        const tituloSobremesa = document.querySelector(".sobremesas .bordaCheck .menu-infos h2").innerHTML; 
+        document.querySelector(".box-sobremesa .item-escolhido").innerHTML = `${tituloSobremesa}`;
+        const precoSobremesa = document.querySelector(".sobremesas .bordaCheck .menu-infos p").innerHTML;
+        document.querySelector(".box-sobremesa .preco").innerHTML = `${precoSobremesa}`;
+
+        //total
+        const valorComida = Number((precoComida).replace("R$","").replace(",","."));
+        const valorBebida = Number((precoBebida).replace("R$","").replace(",","."));
+        const valorSobremesa = Number((precoSobremesa).replace("R$","").replace(",","."));
+        const total = (valorComida + valorBebida + valorSobremesa).toFixed(2);
+        document.querySelector(".box-total .preco-total").innerHTML = `R$ ${total}`;
+    }
+}
+
+
+/* Enviar mensagem whatsapp */
+function msgWpp(){    
+    //comida selecionada 
+    const tituloComida = document.querySelector(".pratos .bordaCheck .menu-infos h2").innerHTML; 
+    document.querySelector(".box-comida .item-escolhido").innerHTML = `${tituloComida}`;
+    const precoComida = document.querySelector(".pratos .bordaCheck .menu-infos p").innerHTML;
+    document.querySelector(".box-comida .preco").innerHTML = `${precoComida}`;
+
+    //bebida selecionada 
+    const tituloBebida = document.querySelector(".bebidas .bordaCheck .menu-infos h2").innerHTML; 
+    document.querySelector(".box-bebida .item-escolhido").innerHTML = `${tituloBebida}`;
+    const precoBebida = document.querySelector(".bebidas .bordaCheck .menu-infos p").innerHTML;
+    document.querySelector(".box-bebida .preco").innerHTML = `${precoBebida}`;
+
+    //sobremesa selecionada 
+    const tituloSobremesa = document.querySelector(".sobremesas .bordaCheck .menu-infos h2").innerHTML; 
+    document.querySelector(".box-sobremesa .item-escolhido").innerHTML = `${tituloSobremesa}`;
+    const precoSobremesa = document.querySelector(".sobremesas .bordaCheck .menu-infos p").innerHTML;
+    document.querySelector(".box-sobremesa .preco").innerHTML = `${precoSobremesa}`;
+
+    //total
+    const valorComida = Number((precoComida).replace("R$","").replace(",","."));
+    const valorBebida = Number((precoBebida).replace("R$","").replace(",","."));
+    const valorSobremesa = Number((precoSobremesa).replace("R$","").replace(",","."));
+    const total = (valorComida + valorBebida + valorSobremesa).toFixed(2);
+    document.querySelector(".box-total .preco-total").innerHTML = `R$ ${total}`;
+
+    const nome = prompt('Digite seu nome: ')
+    const endereco = prompt('Digite seu endereço: ')
+
+    const msg = `Olá, gostaria de fazer o pedido:\n- Prato: ${tituloComida}\n- Bebida: ${tituloBebida}\n- Sobremesa: ${tituloSobremesa}\nTotal: R$ ${total}\n\nNome: ${nome}\nEndereço: ${endereco}`;
     const enviarMsg = `https://wa.me/5524988235658?text=${encodeURIComponent(msg)}`;
-    window.open(enviarMsg);
-    
+    window.open(enviarMsg);    
+}
+
+
+/* Cancelar */
+function cancelePedido() {
+    const containerOpaco = document.querySelector(".container-opaco");
+    containerOpaco.classList.add("escondido");
 }

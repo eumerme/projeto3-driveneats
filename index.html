@@ -16,6 +16,7 @@
         <h2>Sua comida em 6 minutos</h2>
     </div>
 
+
     <!--Feed de conteúdo-->
     <div class="feed">
             
@@ -75,6 +76,7 @@
 
             </div>
         </div>
+
 
         <!--Escolha da bebida-->
         <div class="container-itens">
@@ -193,16 +195,57 @@
 
     </div>
 
+
     <!--Barra da base-->
     <div class="barra-base">
         <div class="botao-3itens">
             <p>Selecione os 3 itens</p>
             <p>para fechar o pedido</p>
         </div>       
-        <div class="escondido fecharPedido" onclick="msgWpp()";>
+        <div class="escondido fecharPedido" onclick="confirmePedido()";>
             <p>Fechar pedido</p>            
         </div>
-    </div>     
+    </div>    
+
+
+     <!-- Confirmar pedido -->
+    <div class="escondido container-opaco">
+
+        <div class="confirmacao-pedido">
+            <h1>Confirme seu pedido</h1>
+
+            <div class="box-comida">
+                <div class="item-escolhido">XXX</div>
+                <div class="preco">R$</div>
+            </div> 
+
+            <div class="box-bebida">
+                <div class="item-escolhido">XXX</div>
+                <div class="preco">R$</div>
+            </div> 
+
+            <div class="box-sobremesa">
+                <div class="item-escolhido">XXX</div>
+                <div class="preco">R$</div>
+            </div> 
+
+            <div class="box-total">
+                <div class="itens-totais">TOTAL</div>
+                <div class="preco-total">R$</div>
+            </div>
+
+            <div class="botao-confirmaCancela">
+                <div class="botao-tucoCerto" onclick="msgWpp()";>
+                    <h1>Tudo certo, pode pedir!</h1>
+                </div> 
+                <div class="botao-cancela" onclick="cancelePedido()";>
+                    <h1>Cancelar</h1>
+                </div>             
+            </div>
+        
+        </div>
+
+    </div> 
 
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 
